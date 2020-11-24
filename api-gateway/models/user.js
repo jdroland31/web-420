@@ -1,5 +1,5 @@
 /*============================================
-Title: Assignment 2.3;
+Title: user.js;
 Author: Professor Krasso ;
 Date: 26 Oct 2020;
 Modified By: Jonathan Roland;
@@ -12,6 +12,7 @@ var userSchema = new mongoose.Schema({
     password: String,
     email: String
 });
+var User = module.exports = mongoose.model('User', userSchema);
 module.exports = mongoose.model('User', userSchema);
 
 //user.save is used to add a new user in our database
@@ -22,3 +23,8 @@ module.exports.getById = (id,callback) => {
     var query = {_id: id};
     User.findById(query,callback);
 };
+
+module.exports.getOne = (e,callback) => {
+    var query = {email: e};
+    User.findOne(query, callback);
+}

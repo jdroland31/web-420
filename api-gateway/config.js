@@ -1,5 +1,5 @@
 /*============================================
-Title: Assignment 2.3;
+Title: config.js;
 Author: Professor Krasso ;
 Date: 26 Oct 2020;
 Modified By: Jonathan Roland;
